@@ -5,10 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yuvraj — Portfolio</title>
     <link rel="icon" href="Gemini_Generated_Image_hpplo1hpplo1hppl.png">
+    <link rel="icon" href="icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Plus+Jakarta+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
     
+
+    <!-- SEO -->
+
+    <meta name="description" content="Yuvraj Saroye is a Full Stack Web Developer and Video Editor from Ludhiana, India. Explore premium websites, creative UI/UX designs, responsive web applications, and professional digital solutions.">
+
+    <meta name="keywords" content="Yuvraj Saroye, Web Developer Ludhiana, Full Stack Developer India, Portfolio, HTML CSS JavaScript, Responsive Website, UI UX Designer, Front End Developer, Video Editor, Freelance Web Developer, Punjab">
+
+    <meta name="author" content="Yuvraj Saroye">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0f0f0f">
+
+
+    <meta property="og:title" content="Yuvraj Saroye | Full Stack Web Developer">
+
+    <meta property="og:description" content="Premium web development, UI/UX design, and video editing services from Ludhiana, India.">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:image" content="https://yourdomain.com/preview.png">
+
+    <meta property="og:url" content="https://yourdomain.com/">
     <style>
         /* ==========================================================================
            1. THE LUXURY CANVAS (AGGRESSIVE MINIMALISM)
@@ -63,13 +90,28 @@
             text-decoration: none;
             font-size: 0.65rem;
             font-weight: 500;
+            position: relative;
             letter-spacing: 3px;
             text-transform: uppercase;
             transition: color 0.4s ease;
         }
+        .nav a::before{
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 0%;
+            transition: 0.3s ease-in-out;
+            background-color: white;
+            top: 1.4em;
+        }
+
+        .nav a:hover::before{
+            width: 100%;
+        }
 
         .nav a:hover {
             color: #ffffff;
+            
         }
 
         .menu-toggle {
@@ -143,15 +185,26 @@
         }
 
         .about-wrap {
-            width: 60%;
-            display: flex;
-            flex-direction: column;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
             gap: 40px;
             
             /* Scroll Animation using your 0% 30% range specs */
             animation: scrollReveal linear both;
             animation-timeline: view();
-            animation-range: entry 0% cover 30%;
+            animation-range: 0%  30%;
+        }
+
+        .about-icons{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            font-size: 4em;
+            place-items: center;
+            i{
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: 1px white;
+            }
         }
 
         .about-meta {
@@ -159,14 +212,17 @@
             letter-spacing: 3px;
             text-transform: uppercase;
             color: rgba(255,255,255,0.3);
+            text-align: center;
         }
 
         .about-text {
+            width: 100%;
             font-family: 'Italiana', serif;
             font-size: 3.5rem;
             line-height: 1.2;
             color: #ffffff;
             font-weight: 300;
+            text-align: center;
         }
 
         /* Services Frame: Asymmetric Row Lines */
@@ -317,13 +373,17 @@
         .one {
             display: flex;
             gap: 30px;
+            font-size: 2em;
+            
         }
         
         .one a {
             color: rgba(255,255,255,0.3);
             text-decoration: none;
             transition: color 0.3s;
+            
         }
+
         
         .one a:hover {
             color: #ffffff;
@@ -341,8 +401,23 @@
             letter-spacing: 2px;
             font-size: 0.6rem;
             transition: color 0.3s;
+            position: relative;
         }
         
+        .two a::before{
+            content: '';
+            width: 0;
+            height: 2px;
+            background: white;
+            position: absolute;
+            top: 1.2em;
+            transition: 0.3s ease-in-out;
+        }
+
+        .two a:hover::before{
+            width: 100%;
+        }
+
         .two a:hover {
             color: #ffffff;
         }
@@ -358,7 +433,7 @@
         @keyframes cinematicReveal {
             from {
                 opacity: 0;
-                transform: translateY(40px);
+                transform: translateY(80px);
                 filter: blur(5px);
             }
             to {
@@ -372,7 +447,7 @@
         @keyframes scrollReveal {
             from {
                 opacity: 0;
-                transform: translateY(60px);
+                transform: translateY(120px);
                 filter: blur(4px);
             }
             to {
@@ -389,7 +464,7 @@
             }
             to {
                 opacity: 0;
-                transform: scale(0.9) translateY(-30px);
+                transform: scale(0.8) translateY(-30px);
             }
         }
 
@@ -397,7 +472,8 @@
            5. ADAPTIVE RESPONSIVE SCALE
            ========================================================================== */
         @media screen and (max-width: 1024px) {
-            .about-wrap { width: 80%; }
+            
+            
             .feedback { gap: 60px; }
         }
 
@@ -463,9 +539,18 @@
 
     <div class="main" id="main">
         <div class="about-wrap">
-            <div class="about-meta">// Core Competence</div>
-            <div class="about-text">
-                Crafting clean interactive platforms through elegant interface engineering and computer systems architectures.
+            <div class="about-icons">
+                <i class="fa fa-graduation-cap"></i>
+                
+                <i class="fa fa-laptop-code"></i>
+                
+            </div>
+            <div class="about-text-M">
+
+                <div class="about-meta">// Core Competence</div>
+                <div class="about-text">
+                    Crafting clean interactive platforms through elegant interface engineering and computer systems architectures.
+                </div>
             </div>
         </div>
     </div>
@@ -473,15 +558,18 @@
     <div class="footer" id="footer">
         <div class="grid-content">
             <h1>Video Articulation</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis consequuntur totam recusandae vel excepturi cupiditate vitae reiciendis. Dolorum laboriosam expedita assumenda, id dolores, hic quam incidunt at eaque.</p>
+            <p>Video editing, to me, extends far beyond assembling footage—it is the meticulous craft of shaping atmosphere, rhythm, and visual narrative into a cohesive cinematic experience. Every transition, frame, and color grade is executed with deliberate precision to evoke emotion while preserving clarity and sophistication. By harmonizing technical excellence with creative intuition, I transform raw content into compelling visual stories that resonate with audiences and leave a lasting impression through exceptional attention to detail and timeless aesthetic refinement.
+</p>
         </div>
         <div class="grid-content">
             <h1>Intelligence Systems</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, laborum laboriosam! Omnis, perspiciatis quae. Perferendis veritatis culpa eveniet laboriosam inventore natus magni iusto, alias deleniti fugit.</p>
+            <p>Artificial intelligence has become an indispensable extension of my development workflow, enabling me to transform ambitious concepts into refined digital experiences with exceptional efficiency. I employ AI as an intelligent collaborative instrument to accelerate research, optimize code architecture, refine user experiences, and enhance creative problem-solving—while ensuring that every decision, implementation, and final outcome remains guided by my own technical expertise, critical judgment, and uncompromising attention to quality.
+</p>
         </div>
         <div class="grid-content">
             <h1>Technical Instruction</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quo, voluptates facilis distinctio pariatur veniam voluptatem odit minima nihil vitae maiores eum maxime omnis magnam sit adipisci sed.</p>
+            <p>Knowledge attains its greatest value when it is shared with clarity and purpose. I take pride in simplifying complex concepts across computer fundamentals, web development, and video editing into engaging, structured, and accessible learning experiences. By combining technical expertise with patience and effective communication, I help learners build confidence, develop practical skills, and cultivate a deeper understanding that extends beyond theory into real-world application.
+</p>
         </div>
     </div>
 
@@ -516,9 +604,9 @@
     <div class="subfooter">
         <div class="description">
             <div class="one">
-                <a href="#">Instagram</a>
-                <a href="#">Github</a>
-                <a href="#">LinkedIn</a>
+                <a href="https://www.instagram.com/saroye.yuvraj/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/yuvrajsaroye162-ai"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.threads.com/@saroye.yuvraj"><i class="fa-brands fa-threads"></i></a>
             </div>
             <div class="two">
                 <a href="#Hero">Top</a>
