@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yuvraj — Portfolio</title>
-    <link rel="icon" href="Gemini_Generated_Image_hpplo1hpplo1hppl.png">
-    <link rel="icon" href="icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+<!-- Main Favicon for Google Search and Modern Browsers (Must be square!) -->
+<link rel="icon" type="image/png" sizes="32x32" href="/icon.png">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Plus+Jakarta+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
@@ -15,7 +16,9 @@
     <!-- SEO -->
 
     <meta name="google-site-verification" content="FgG6706nrZI7mgBrJ2ppyP3pX44HwOuD9x9RX6WKWwc" />
-    
+
+    <meta name="description" content="Portfolio of Yuvraj Saroye, a Full Stack Web Developer from Ludhiana, Punjab, specializing in premium websites, UI/UX, and creative digital experiences.">
+
     <meta name="description" content="Yuvraj Saroye is a Full Stack Web Developer and Video Editor from Ludhiana, India. Explore premium websites, creative UI/UX designs, responsive web applications, and professional digital solutions.">
 
     <meta name="keywords" content="Yuvraj Saroye, Web Developer Ludhiana, Full Stack Developer India, Portfolio, HTML CSS JavaScript, Responsive Website, UI UX Designer, Front End Developer, Video Editor, Freelance Web Developer, Punjab">
@@ -60,6 +63,8 @@
             -webkit-font-smoothing: antialiased;
         }
 
+        
+
         /* Editorial Top Navigation */
         header {
             height: 100px;
@@ -100,9 +105,9 @@
         .nav a::before{
             content: '';
             position: absolute;
-            height: 2px;
+            height: 1px;
             width: 0%;
-            transition: 0.3s ease-in-out;
+            transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
             background-color: white;
             top: 1.4em;
         }
@@ -205,10 +210,15 @@
             place-items: center;
             i{
                 -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: 1px grey;
+                transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+            }
+            i:hover{
                 -webkit-text-stroke: 1px white;
+                transform: translateY(-5px);
             }
         }
-
+        
         .about-meta {
             font-size: 0.65rem;
             letter-spacing: 3px;
@@ -242,18 +252,24 @@
             border-top: 1px solid rgba(255, 255, 255, 0.08);
             align-items: start;
             gap: 40px;
-            
             /* Staggered look achieved naturally as each row enters your 0%-30% range */
             animation: scrollReveal linear both;
             animation-timeline: view();
             animation-range: entry 0% cover 30%;
         }
-
+        .grid-content:hover p{
+            color: white;
+        }
+        .grid-content:hover h1{
+            letter-spacing: 5px;
+        }
+        
         .grid-content:last-of-type {
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
-
+        
         .grid-content h1 {
+            transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
             font-family: 'Italiana', serif;
             font-size: 2rem;
             color: #ffffff;
@@ -261,6 +277,7 @@
         }
 
         .grid-content p {
+            transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
             font-size: 0.85rem;
             color: #888888;
             line-height: 1.8;
@@ -409,11 +426,11 @@
         .two a::before{
             content: '';
             width: 0;
-            height: 2px;
+            height: 1px;
             background: white;
             position: absolute;
-            top: 1.2em;
-            transition: 0.3s ease-in-out;
+            top: 1.5em;
+            transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
         }
 
         .two a:hover::before{
@@ -548,7 +565,7 @@
                 
             </div>
             <div class="about-text-M">
-
+                
                 <div class="about-meta">// Core Competence</div>
                 <div class="about-text">
                     Crafting clean interactive platforms through elegant interface engineering and computer systems architectures.
@@ -561,22 +578,23 @@
         <div class="grid-content">
             <h1>Video Articulation</h1>
             <p>Video editing, to me, extends far beyond assembling footage—it is the meticulous craft of shaping atmosphere, rhythm, and visual narrative into a cohesive cinematic experience. Every transition, frame, and color grade is executed with deliberate precision to evoke emotion while preserving clarity and sophistication. By harmonizing technical excellence with creative intuition, I transform raw content into compelling visual stories that resonate with audiences and leave a lasting impression through exceptional attention to detail and timeless aesthetic refinement.
-</p>
+            </p>
         </div>
         <div class="grid-content">
             <h1>Intelligence Systems</h1>
             <p>Artificial intelligence has become an indispensable extension of my development workflow, enabling me to transform ambitious concepts into refined digital experiences with exceptional efficiency. I employ AI as an intelligent collaborative instrument to accelerate research, optimize code architecture, refine user experiences, and enhance creative problem-solving—while ensuring that every decision, implementation, and final outcome remains guided by my own technical expertise, critical judgment, and uncompromising attention to quality.
-</p>
+            </p>
         </div>
         <div class="grid-content">
             <h1>Technical Instruction</h1>
             <p>Knowledge attains its greatest value when it is shared with clarity and purpose. I take pride in simplifying complex concepts across computer fundamentals, web development, and video editing into engaging, structured, and accessible learning experiences. By combining technical expertise with patience and effective communication, I help learners build confidence, develop practical skills, and cultivate a deeper understanding that extends beyond theory into real-world application.
 </p>
-        </div>
-    </div>
+</div>
+</div>
 
-    <div class="feedback" id="f">
-        <div class="p f">
+
+<div class="feedback" id="f">
+    <div class="p f">
             <p>Let's design something meaningful.</p>
         </div>
         <div class="form f">
@@ -602,6 +620,8 @@
             </form>
         </div>
     </div>
+
+    
 
     <div class="subfooter">
         <div class="description">
