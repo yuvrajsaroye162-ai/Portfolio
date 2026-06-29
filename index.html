@@ -289,23 +289,23 @@
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 24px;
+        animation: ltr both;
+        animation-timeline: view();
+        animation-range: 0 35%;
     }
     
     .project-card,
     .service-box {
-        animation: ltr both;
-        animation-timeline: view();
-        animation-range: 0 35%;
         border: 1px solid rgba(255,255,255,0.08);
         background: rgba(255,255,255,0.02);
         padding: 28px;
-        transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
-    }
-
-    .project-card:hover,
-    .service-box:hover {
-      border-color: rgba(255,255,255,0.22);
-      transform: translateY(-4px);
+        transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+      
+      .project-card:hover,
+      .service-box:hover {
+        border-color: rgba(255,255,255,0.22);
+      transform: translateY(-4px) scale(1.05) rotate(1deg);
     }
     
     .project-card h3,
@@ -358,6 +358,7 @@
       border: 1px solid rgba(255,255,255,0.08);
       background: rgba(255,255,255,0.02);
       padding: 22px 24px;
+      transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
     }
 
     .faq-list summary {
@@ -366,6 +367,10 @@
       font-size: 0.95rem;
       letter-spacing: 0.2px;
       list-style: none;
+    }
+    .faq-list details:hover{
+      border-color: rgba(255,255,255,0.22);
+      transform: translateY(-4px);
     }
 
     .faq-list summary::-webkit-details-marker {
@@ -601,6 +606,7 @@
       from {
         opacity: 0;
         transform: translateY(120px);
+        filter: blur(25px);
       }
       to {
         opacity: 1;
