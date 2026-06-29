@@ -1,675 +1,950 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuvraj — Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yuvraj Saroye | Portfolio | CV | Web Developer in Ludhiana </title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/icon.ico">
+  <link rel="shortcut icon" href="/icon.ico" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Plus+Jakarta+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+  <meta name="google-site-verification" content="FgG6706nrZI7mgBrJ2ppyP3pX44HwOuD9x9RX6WKWwc">
+
+  <meta name="description" content="Yuvraj Saroye is a full stack web developer and video editor from Ludhiana, Punjab, building premium websites, UI/UX designs, and creative digital experiences.">
+  <meta name="keywords" content="Yuvraj Saroye, web developer Ludhiana, full stack developer Punjab, portfolio website, UI UX design, video editor, freelance web developer, front end developer">
+  <meta name="author" content="Yuvraj Saroye">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#080808">
+
+  <meta property="og:title" content="Yuvraj Saroye | Full Stack Web Developer">
+  <meta property="og:description" content="Premium web development, UI/UX design, and video editing services from Ludhiana, Punjab.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://yourdomain.com/preview.png">
+  <meta property="og:url" content="https://yourdomain.com/">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #080808;
+      color: #d4d4d4;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      height: 100px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 5%;
+      position: fixed;
+      top: 0;
+      z-index: 999;
+      background: linear-gradient(to bottom, #080808 40%, rgba(8,8,8,0));
+    }
+
+    .logo {
+      font-family: 'Italiana', serif;
+      font-size: 1.5rem;
+      letter-spacing: 6px;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    .nav-menu-list {
+      display: flex;
+      gap: 50px;
+    }
+
+    .nav-menu-list a {
+      color: rgba(255, 255, 255, 0.4);
+      text-decoration: none;
+      font-size: 0.65rem;
+      font-weight: 500;
+      position: relative;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      transition: color 0.4s ease;
+    }
+
+    .nav-menu-list a::before {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 0%;
+      transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+      background-color: white;
+      top: 1.4em;
+    }
+
+    .nav-menu-list a:hover::before {
+      width: 100%;
+    }
+
+    .nav-menu-list a:hover {
+      color: #ffffff;
+    }
+
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 20px;
+      height: 1px;
+      background: #ffffff;
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+
+    .hero-section {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 120px 5% 80px;
+      position: relative;
+      background: #080808;
+      z-index: 1;
+    }
+
+    .hero-copy {
+      max-width: 900px;
+      z-index: 3;
+      animation: cinematicReveal 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-main-title {
+      font-family: 'Italiana', serif;
+      font-size: 14vw;
+      font-weight: 400;
+      color: #ffffff;
+      line-height: 0.9;
+      letter-spacing: -2px;
+      animation: cinematicReveal 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-subtitle {
+      margin-top: 24px;
+      max-width: 700px;
+      font-size: 0.95rem;
+      line-height: 1.9;
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 0.2px;
+      animation: cinematicReveal 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-actions {
+      margin-top: 34px;
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .hero-actions a {
+      text-decoration: none;
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 12px 18px;
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      transition: 0.3s ease;
+    }
+
+    .hero-actions a:hover {
+      background: #ffffff;
+      color: #080808;
+    }
+
+    .hero-section img {
+      position: absolute;
+      right: 10%;
+      height: 65%;
+      max-height: 600px;
+      width: auto;
+      object-fit: contain;
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 1;
+      filter: grayscale(100%) contrast(110%);
+      animation: heroFadeOut linear both;
+      animation-timeline: view();
+      animation-range: exit 0% exit 100%;
+    }
+
+    .about-section,
+    .projects,
+    .services,
+    .faq,
+    .footer-highlights,
+    .contact-section,
+    .subfooter {
+      position: relative;
+      z-index: 1;
+      background-color: #080808;
+    }
+
+    .about-section {
+      padding: 160px 5%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .about-wrap {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      animation: scrollReveal linear both;
+      animation-timeline: view();
+      animation-range: 0% 30%;
+    }
+
+    .about-icons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      font-size: 4em;
+      place-items: center;
+    }
+
+    .about-icons i {
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1px grey;
+      transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .about-icons i:hover {
+      -webkit-text-stroke: 1px white;
+      transform: translateY(-5px);
+    }
+
+    .about-meta {
+      font-size: 0.65rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .about-text {
+      width: 100%;
+      font-family: 'Italiana', serif;
+      font-size: 3.5rem;
+      line-height: 1.2;
+      color: #ffffff;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    .section-head {
+      margin-bottom: 40px;
+      text-align: center;
+      animation: ltr both;
+      animation-timeline: view();
+      animation-range: 0 35%;
+    }
+
+    .section-title {
+      font-family: 'Italiana', serif;
+      font-size: clamp(2rem, 4vw, 4rem);
+      color: #ffffff;
+      font-weight: 400;
+      line-height: 1.1;
+      animation: ltr both;
+      animation-timeline: view();
+      animation-range: 0 35%;
+    }
     
-<!-- Main Favicon for Google Search and Modern Browsers (Must be square!) -->
-<link rel="icon" type="image/png" sizes="32x32" href="/icon.png">
-<link rel="shortcut icon" href="/icon.png" type="image/x-icon">    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Plus+Jakarta+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
+    .projects,
+    .services,
+    .faq {
+        animation: ltr both;
+        animation-timeline: view();
+        animation-range: 0 35%;
+        padding: 140px 5%;
+    }
     
+    .project-list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+    }
+    
+    .project-card,
+    .service-box {
+        animation: ltr both;
+        animation-timeline: view();
+        animation-range: 0 35%;
+        border: 1px solid rgba(255,255,255,0.08);
+        background: rgba(255,255,255,0.02);
+        padding: 28px;
+        transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    }
 
-    <!-- SEO -->
+    .project-card:hover,
+    .service-box:hover {
+      border-color: rgba(255,255,255,0.22);
+      transform: translateY(-4px);
+    }
+    
+    .project-card h3,
+    .service-box h3 {
+      font-family: 'Italiana', serif;
+      font-size: 1.8rem;
+      color: #ffffff;
+      font-weight: 400;
+      margin-bottom: 14px;
+    }
 
-    <meta name="google-site-verification" content="FgG6706nrZI7mgBrJ2ppyP3pX44HwOuD9x9RX6WKWwc" />
+    .project-card p,
+    .service-box p,
+    .faq-list p {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.68);
+    }
 
-    <meta name="description" content="Portfolio of Yuvraj Saroye, a Full Stack Web Developer from Ludhiana, Punjab, specializing in premium websites, UI/UX, and creative digital experiences.">
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
 
-    <meta name="description" content="Yuvraj Saroye is a Full Stack Web Developer and Video Editor from Ludhiana, India. Explore premium websites, creative UI/UX designs, responsive web applications, and professional digital solutions.">
+    .project-tags span {
+      font-size: 0.62rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 8px 10px;
+    }
 
-    <meta name="keywords" content="Yuvraj Saroye, Web Developer Ludhiana, Full Stack Developer India, Portfolio, HTML CSS JavaScript, Responsive Website, UI UX Designer, Front End Developer, Video Editor, Freelance Web Developer, Punjab">
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
 
-    <meta name="keywords" content="Web Developer Ludhiana">
+    .faq-list {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      gap: 16px;
+    }
 
-    <meta name="keywords" content="Yuvraj Portfolio">
+    .faq-list details {
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.02);
+      padding: 22px 24px;
+    }
 
-    <meta name="keywords" content="Full Stack Developer">
+    .faq-list summary {
+      cursor: pointer;
+      color: #ffffff;
+      font-size: 0.95rem;
+      letter-spacing: 0.2px;
+      list-style: none;
+    }
 
-    <meta name="keywords" content="Front End Developer">
+    .faq-list summary::-webkit-details-marker {
+      display: none;
+    }
 
-    <meta name="keywords" content="Video Editor">
+    .faq-list details p {
+      margin-top: 12px;
+    }
 
-    <meta name="keywords" content="Freelance Web Developer">
+    .footer-highlights {
+      padding: 160px 5%;
+      display: flex;
+      flex-direction: column;
+    }
 
-    <meta name="author" content="Yuvraj Saroye">
+    .grid-content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      padding: 60px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      align-items: start;
+      gap: 40px;
+      animation: scrollReveal linear both;
+      animation-timeline: view();
+      animation-range: 0% 30%;
+    }
 
-    <meta name="robots" content="index, follow">
+    .grid-content:last-of-type {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    .grid-content:hover p {
+      color: white;
+    }
 
-    <meta name="theme-color" content="#0f0f0f">
+    .grid-content:hover h1 {
+      letter-spacing: 5px;
+    }
 
-    <meta property="og:title" content="Yuvraj Saroye | Full Stack Web Developer">
+    .grid-content h1 {
+      transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+      font-family: 'Italiana', serif;
+      font-size: 2rem;
+      color: #ffffff;
+      font-weight: 400;
+    }
 
-    <meta property="og:description" content="Premium web development, UI/UX design, and video editing services from Ludhiana, India.">
+    .grid-content p {
+      transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+      font-size: 0.85rem;
+      color: #888888;
+      line-height: 1.8;
+      max-width: 600px;
+      font-weight: 300;
+      letter-spacing: 0.2px;
+    }
 
-    <meta property="og:type" content="website">
+    .contact-section {
+      padding: 160px 5%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 120px;
+      align-items: start;
+      animation: scrollReveal linear both;
+      animation-timeline: view();
+      animation-range: 0% 30%;
+    }
 
-    <meta property="og:image" content="https://yourdomain.com/preview.png">
+    .contact-title-box p {
+      font-family: 'Italiana', serif;
+      font-size: 3rem;
+      color: #ffffff;
+      line-height: 1.2;
+    }
 
-    <meta property="og:url" content="https://yourdomain.com/">
-    <style>
-        /* ==========================================================================
-           1. THE LUXURY CANVAS (AGGRESSIVE MINIMALISM)
-           ========================================================================== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    .contact-note {
+      margin-top: 16px;
+      color: rgba(255,255,255,0.55);
+      font-size: 0.9rem;
+      line-height: 1.8;
+      max-width: 460px;
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    .form-wrapper form {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
 
-        body {
-            background-color: #080808;
-            color: #d4d4d4;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-        }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
 
-        
+    .form-group label {
+      font-size: 0.6rem;
+      color: rgba(255,255,255,0.4);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
 
-        /* Editorial Top Navigation */
-        header {
-            height: 100px;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 5%;
-            position: fixed;
-            top: 0;
-            z-index: 999;
-            background: linear-gradient(to bottom, #080808 40%, rgba(8,8,8,0));
-        }
+    .form-wrapper input,
+    .form-wrapper textarea {
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      padding: 12px 0;
+      border-radius: 0;
+      font-family: inherit;
+      font-size: 0.9rem;
+      transition: border-color 0.4s ease;
+      resize: vertical;
+    }
 
-        .logo {
-            font-family: 'Italiana', serif;
-            font-size: 1.5rem;
-            letter-spacing: 6px;
-            color: #ffffff;
-            text-transform: uppercase;
-        }
+    .form-wrapper input:focus,
+    .form-wrapper textarea:focus {
+      outline: none;
+      border-bottom-color: #ffffff;
+    }
 
-        .nav {
-            display: flex;
-            gap: 50px;
-        }
+    .form-buttons {
+      display: flex;
+      justify-content: flex-end;
+    }
 
-        .nav a {
-            color: rgba(255, 255, 255, 0.4);
-            text-decoration: none;
-            font-size: 0.65rem;
-            font-weight: 500;
-            position: relative;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            transition: color 0.4s ease;
-        }
-        .nav a::before{
-            content: '';
-            position: absolute;
-            height: 1px;
-            width: 0%;
-            transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-            background-color: white;
-            top: 1.4em;
-        }
+    .form-wrapper button {
+      background: transparent;
+      color: #ffffff;
+      border: none;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 10px 0;
+      border-bottom: 1px solid #ffffff;
+      transition: opacity 0.3s;
+    }
 
-        .nav a:hover::before{
-            width: 100%;
-        }
+    .form-wrapper button:hover {
+      opacity: 0.5;
+    }
 
-        .nav a:hover {
-            color: #ffffff;
-            
-        }
+    .subfooter {
+      padding: 100px 5% 60px;
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+    }
 
-        .menu-toggle {
-            display: none;
-            cursor: pointer;
-            z-index: 1001;
-        }
+    .footer-description {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.5px;
+      gap: 30px;
+    }
 
-        .menu-toggle span {
-            display: block;
-            width: 20px;
-            height: 1px;
-            background: #ffffff;
-            margin: 4px 0;
-            transition: 0.3s;
-        }
+    .footer-social-links {
+      display: flex;
+      gap: 30px;
+      font-size: 2em;
+    }
 
-        /* ==========================================================================
-           2. HERO VIEWPORT (EDITORIAL POSTER LAYOUT)
-           ========================================================================== */
-        .hero-section {
-            height: 100vh;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            padding: 0 5%;
-            position: relative;
-            background: #080808;
-        }
+    .footer-social-links a,
+    .footer-nav-links a {
+      color: rgba(255,255,255,0.3);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
 
-        .h-s-t {
-            font-family: 'Italiana', serif;
-            font-size: 14vw;
-            font-weight: 400;
-            color: #ffffff;
-            line-height: 0.9;
-            letter-spacing: -2px;
-            z-index: 3;
-            mix-blend-mode: difference; /* Text cuts dramatically through graphic backgrounds */
-            animation: cinematicReveal 1.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+    .footer-social-links a:hover,
+    .footer-nav-links a:hover {
+      color: #ffffff;
+    }
 
-        .hero-section img {
-            position: absolute;
-            right: 10%;
-            height: 65%;
-            max-height: 600px;
-            width: auto;
-            object-fit: contain;
-            opacity: 0.15; /* Soft, fine-art background element treatment */
-            pointer-events: none;
-            z-index: 1;
-            filter: grayscale(100%) contrast(110%);
-            
-            /* Scroll Animation for the Hero Image */
-            animation: heroFadeOut linear both;
-            animation-timeline: view();
-            animation-range: exit 0% exit 100%;
-        }
+    .footer-nav-links {
+      display: flex;
+      gap: 40px;
+    }
 
-        /* ==========================================================================
-           3. CONTENT STRUCTURING (OFFSET COLUMNS)
-           ========================================================================== */
-        
-        /* Focus Section: Large structural statement text instead of standard cards */
-        .main {
-            padding: 160px 5%;
-            background-color: #080808;
-            display: flex;
-            justify-content: flex-end;
-        }
+    .footer-nav-links a {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.6rem;
+      transition: color 0.3s;
+      position: relative;
+    }
 
-        .about-wrap {
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 40px;
-            
-            /* Scroll Animation using your 0% 30% range specs */
-            animation: scrollReveal linear both;
-            animation-timeline: view();
-            animation-range: 0%  30%;
-        }
+    .footer-nav-links a::before {
+      content: '';
+      width: 0;
+      height: 1px;
+      background: white;
+      position: absolute;
+      top: 1.5em;
+      transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    }
 
-        .about-icons{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            font-size: 4em;
-            place-items: center;
-            i{
-                -webkit-text-fill-color: transparent;
-                -webkit-text-stroke: 1px grey;
-                transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
-            }
-            i:hover{
-                -webkit-text-stroke: 1px white;
-                transform: translateY(-5px);
-            }
-        }
-        
-        .about-meta {
-            font-size: 0.65rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.3);
-            text-align: center;
-        }
+    .footer-nav-links a:hover::before {
+      width: 100%;
+    }
 
-        .about-text {
-            width: 100%;
-            font-family: 'Italiana', serif;
-            font-size: 3.5rem;
-            line-height: 1.2;
-            color: #ffffff;
-            font-weight: 300;
-            text-align: center;
-        }
+    .footer-info-text {
+      line-height: 1.8;
+      text-align: right;
+    }
 
-        /* Services Frame: Asymmetric Row Lines */
-        .footer {
-            padding: 160px 5%;
-            background-color: #080808;
-            display: flex;
-            flex-direction: column;
+    @keyframes ltr{
+        from{
+            transform: translateX(-100%);
+            opacity: 0;
         }
+    }
 
-        .grid-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            padding: 60px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            align-items: start;
-            gap: 40px;
-            /* Staggered look achieved naturally as each row enters your 0%-30% range */
-            animation: scrollReveal linear both;
-            animation-timeline: view();
-            animation-range: entry 0% cover 30%;
-        }
-        .grid-content:hover p{
-            color: white;
-        }
-        .grid-content:hover h1{
-            letter-spacing: 5px;
-        }
-        
-        .grid-content:last-of-type {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        
-        .grid-content h1 {
-            transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
-            font-family: 'Italiana', serif;
-            font-size: 2rem;
-            color: #ffffff;
-            font-weight: 400;
-        }
+    @keyframes cinematicReveal {
+      from {
+        opacity: 0;
+        transform: translateY(80px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-        .grid-content p {
-            transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
-            font-size: 0.85rem;
-            color: #888888;
-            line-height: 1.8;
-            max-width: 600px;
-            font-weight: 300;
-            letter-spacing: 0.2px;
-        }
+    @keyframes scrollReveal {
+      from {
+        opacity: 0;
+        transform: translateY(120px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-        /* Minimal Input Interface */
-        .feedback {
-            padding: 160px 5%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 120px;
-            align-items: start;
-            background: #080808;
-            
-            /* Scroll Animation for Contact Frame */
-            animation: scrollReveal linear both;
-            animation-timeline: view();
-            animation-range: entry 0% cover 30%;
-        }
-        
-        .p\.f p {
-            font-family: 'Italiana', serif;
-            font-size: 3rem;
-            color: #ffffff;
-            line-height: 1.2;
-        }
-        
-        .form form {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-        }
-        
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        
-        .form-group label {
-            font-size: 0.6rem;
-            color: rgba(255,255,255,0.4);
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        
-        .form input, .form textarea {
-            width: 100%;
-            background-color: transparent;
-            border: none;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-            color: #ffffff;
-            padding: 12px 0;
-            border-radius: 0;
-            font-family: inherit;
-            font-size: 0.9rem;
-            transition: border-color 0.4s ease;
-        }
-        
-        .form input:focus, .form textarea:focus {
-            outline: none;
-            border-bottom-color: #ffffff;
-        }
-        
-        .form-buttons {
-            display: flex;
-            justify-content: flex-end;
-        }
-        
-        .form button {
-            background: transparent;
-            color: #ffffff;
-            border: none;
-            font-size: 0.65rem;
-            font-weight: 600;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            cursor: pointer;
-            padding: 10px 0;
-            border-bottom: 1px solid #ffffff;
-            transition: opacity 0.3s;
-        }
-        
-        .form button:hover {
-            opacity: 0.5;
-        }
+    @keyframes heroFadeOut {
+      from {
+        opacity: 0.15;
+        transform: scale(1);
+      }
+      to {
+        opacity: 0;
+        transform: scale(0.8) translateY(-30px);
+      }
+    }
 
-        #reset {
-            display: none; /* Removed reset button layout distraction */
-        }
-        
-        /* Fine Print Footer */
-        .subfooter {
-            padding: 100px 5% 60px;
-            background-color: #080808;
-            border-top: 1px solid rgba(255, 255, 255, 0.04);
-        }
-        
-        .description {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            font-size: 0.7rem;
-            color: rgba(255,255,255,0.3);
-            letter-spacing: 0.5px;
-        }
-        
-        .one {
-            display: flex;
-            gap: 30px;
-            font-size: 2em;
-            
-        }
-        
-        .one a {
-            color: rgba(255,255,255,0.3);
-            text-decoration: none;
-            transition: color 0.3s;
-            
-        }
+    @media screen and (max-width: 1024px) {
+      .project-list {
+        grid-template-columns: 1fr;
+      }
 
-        
-        .one a:hover {
-            color: #ffffff;
-        }
-        
-        .two {
-            display: flex;
-            gap: 40px;
-        }
-        
-        .two a {
-            color: rgba(255,255,255,0.3);
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.6rem;
-            transition: color 0.3s;
-            position: relative;
-        }
-        
-        .two a::before{
-            content: '';
-            width: 0;
-            height: 1px;
-            background: white;
-            position: absolute;
-            top: 1.5em;
-            transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-        }
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
 
-        .two a:hover::before{
-            width: 100%;
-        }
+      .contact-section {
+        gap: 60px;
+      }
+    }
 
-        .two a:hover {
-            color: #ffffff;
-        }
-        
-        .three {
-            line-height: 1.8;
-            text-align: right;
-        }
+    @media screen and (max-width: 768px) {
+      header {
+        height: 80px;
+      }
 
-        /* ==========================================================================
-           4. MOTION SPECIFICATIONS
-           ========================================================================== */
-        @keyframes cinematicReveal {
-            from {
-                opacity: 0;
-                transform: translateY(80px);
-                filter: blur(5px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-                filter: blur(0);
-            }
-        }
+      .menu-toggle {
+        display: block;
+      }
 
-        /* New Scroll-Driven Keyframes using view() */
-        @keyframes scrollReveal {
-            from {
-                opacity: 0;
-                transform: translateY(120px);
-                filter: blur(4px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-                filter: blur(0);
-            }
-        }
+      .menu-toggle.active span:nth-child(1) {
+        transform: translateY(5px) rotate(45deg);
+      }
 
-        @keyframes heroFadeOut {
-            from {
-                opacity: 0.15;
-                transform: scale(1);
-            }
-            to {
-                opacity: 0;
-                transform: scale(0.8) translateY(-30px);
-            }
-        }
+      .menu-toggle.active span:nth-child(2) {
+        transform: translateY(-0px) rotate(-45deg);
+      }
 
-        /* ==========================================================================
-           5. ADAPTIVE RESPONSIVE SCALE
-           ========================================================================== */
-        @media screen and (max-width: 1024px) {
-            
-            
-            .feedback { gap: 60px; }
-        }
+      .nav-menu-list {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: #080808;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        transition: left 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 1000;
+      }
 
-        @media screen and (max-width: 768px) {
-            header { height: 80px; }
-            .menu-toggle { display: block; }
-            
-            .menu-toggle.active span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
-            .menu-toggle.active span:nth-child(2) { transform: translateY(-0px) rotate(-45deg); }
+      .nav-menu-list.active {
+        left: 0;
+      }
 
-            .nav {
-                position: fixed;
-                top: 0;
-                left: -100%;
-                width: 100%;
-                height: 100vh;
-                background-color: #080808;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 40px;
-                transition: left 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-                z-index: 1000;
-            }
+      .nav-menu-list a {
+        font-size: 0.9rem;
+      }
 
-            .nav.active { left: 0; }
-            .nav a { font-size: 0.9rem; }
-            
-            .about-wrap { width: 100%; }
-            .about-text { font-size: 2.2rem; }
-            
-            .grid-content { grid-template-columns: 1fr; gap: 15px; padding: 40px 0; }
-            .feedback { grid-template-columns: 1fr; gap: 60px; }
-            .p\.f p { font-size: 2.2rem; }
+      .hero-section {
+        padding-top: 110px;
+      }
 
-            .description { flex-direction: column; gap: 40px; }
-            .three { text-align: left; }
-        }
-    </style>
+      .hero-main-title {
+        font-size: 18vw;
+      }
+
+      .hero-subtitle {
+        font-size: 0.9rem;
+      }
+
+      .about-text {
+        font-size: 2.2rem;
+      }
+
+      .grid-content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 40px 0;
+      }
+
+      .contact-section {
+        grid-template-columns: 1fr;
+        gap: 60px;
+      }
+
+      .contact-title-box p {
+        font-size: 2.2rem;
+      }
+
+      .footer-description {
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .footer-info-text {
+        text-align: left;
+      }
+
+      .footer-nav-links {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <div class="logo">Yuvraj</div>
 
-    <header>
-        <div class="logo">Yuvraj</div>
-        
-        <div class="menu-toggle" id="mobile-menu">
-            <span></span>
-            <span></span>
-        </div>
-
-        <nav class="nav" id="nav-menu">
-            <a href="#Hero">Index</a>
-            <a href="#main">Overview</a>
-            <a href="#footer">Expertise</a>
-            <a href="#f">Contact</a>
-        </nav>
-    </header>
-
-    <div class="hero-section" id="Hero">
-        <h1 class="h-s-t">YUVRAJ<br>SAROYE</h1>
-        <img src="1.png" alt="Artwork Frame">
+    <div class="menu-toggle" id="mobile-menu">
+      <span></span>
+      <span></span>
     </div>
 
-    <div class="main" id="main">
-        <div class="about-wrap">
-            <div class="about-icons">
-                <i class="fa fa-graduation-cap"></i>
-                
-                <i class="fa fa-laptop-code"></i>
-                
-            </div>
-            <div class="about-text-M">
-                
-                <div class="about-meta">// Core Competence</div>
-                <div class="about-text">
-                    Crafting clean interactive platforms through elegant interface engineering and computer systems architectures.
-                </div>
-            </div>
+    <nav class="nav-menu-list" id="nav-menu">
+      <a href="#Hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero-section" id="Hero">
+    <div class="hero-copy">
+      <h1 class="hero-main-title">YUVRAJ<br>SAROYE</h1>
+      <p class="hero-subtitle">
+        Front End web developer, video editor, and technical guide from Ludhiana, Punjab, creating premium websites, clean interfaces, and visually refined digital experiences.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects">View Projects</a>
+        <a href="#contact">Start a Project</a>
+      </div>
+    </div>
+    <img src="1.png" alt="Portrait artwork of Yuvraj Saroye">
+  </section>
+
+  <div class="about-section" id="about">
+    <div class="about-wrap">
+      <div class="about-icons">
+        <i class="fa fa-graduation-cap"></i>
+        <i class="fa fa-laptop-code"></i>
+      </div>
+      <div class="about-text-container">
+        <div class="about-meta">// Core Competence</div>
+        <div class="about-text">
+          Crafting clean interactive platforms through elegant interface engineering and computer systems architecture.
         </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="projects" id="projects">
+    <div class="section-head">
+      <div class="about-meta">// Selected Work</div>
+      <h2 class="section-title">Projects That Define My Style</h2>
     </div>
 
-    <div class="footer" id="footer">
-        <div class="grid-content">
-            <h1>Video Articulation</h1>
-            <p>Video editing, to me, extends far beyond assembling footage—it is the meticulous craft of shaping atmosphere, rhythm, and visual narrative into a cohesive cinematic experience. Every transition, frame, and color grade is executed with deliberate precision to evoke emotion while preserving clarity and sophistication. By harmonizing technical excellence with creative intuition, I transform raw content into compelling visual stories that resonate with audiences and leave a lasting impression through exceptional attention to detail and timeless aesthetic refinement.
-            </p>
+    <div class="project-list">
+      <article class="project-card">
+        <h3>Premium Portfolio Website</h3>
+        <p>Built a responsive editorial-style portfolio with smooth motion, strong typography, and a clean visual hierarchy.</p>
+        <div class="project-tags">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive Design</span>
         </div>
-        <div class="grid-content">
-            <h1>Intelligence Systems</h1>
-            <p>Artificial intelligence has become an indispensable extension of my development workflow, enabling me to transform ambitious concepts into refined digital experiences with exceptional efficiency. I employ AI as an intelligent collaborative instrument to accelerate research, optimize code architecture, refine user experiences, and enhance creative problem-solving—while ensuring that every decision, implementation, and final outcome remains guided by my own technical expertise, critical judgment, and uncompromising attention to quality.
-            </p>
-        </div>
-        <div class="grid-content">
-            <h1>Technical Instruction</h1>
-            <p>Knowledge attains its greatest value when it is shared with clarity and purpose. I take pride in simplifying complex concepts across computer fundamentals, web development, and video editing into engaging, structured, and accessible learning experiences. By combining technical expertise with patience and effective communication, I help learners build confidence, develop practical skills, and cultivate a deeper understanding that extends beyond theory into real-world application.
-</p>
-</div>
-</div>
+      </article>
 
+      <article class="project-card">
+        <h3>Creative Business Landing Page</h3>
+        <p>Designed a conversion-focused landing page with modern UI, clear messaging, and fast-loading structure.</p>
+        <div class="project-tags">
+          <span>UI/UX</span><span>Landing Page</span><span>SEO</span>
+        </div>
+      </article>
 
-<div class="feedback" id="f">
-    <div class="p f">
-            <p>Let's design something meaningful.</p>
+      <article class="project-card">
+        <h3>Video Editing Showcase</h3>
+        <p>Produced cinematic edits with pacing, color grading, and polished transitions for a stronger brand presence.</p>
+        <div class="project-tags">
+          <span>Video Editing</span><span>Color Grading</span><span>Motion</span>
         </div>
-        <div class="form f">
-            <form action="https://formsubmit.co/yuvrajsaroye@gmail.com/" method="post">
-                <div class="form-group">
-                    <label for="name">Identification</label>
-                    <input type="text" id="name" placeholder="Your name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Digital Address</label>
-                    <input type="email" id="email" placeholder="email@domain.com" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Project Parameters</label>
-                    <textarea id="message" name="message" rows="3" placeholder="Describe the scope..." required></textarea>
-                </div>
-                
-                <div class="form-buttons">
-                    <button type="submit" id="submit">Initiate Conversation</button>
-                </div>
-            </form>
-        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="section-head">
+      <div class="about-meta">// Services</div>
+      <h2 class="section-title">What I Do Best</h2>
     </div>
 
-    
+    <div class="service-grid">
+      <div class="service-box">
+        <h3>Web Development</h3>
+        <p>Responsive websites, portfolio sites, landing pages, and interactive front-end experiences.</p>
+      </div>
+      <div class="service-box">
+        <h3>UI / UX Design</h3>
+        <p>Clean layouts, Not Pro. But created this whole thing from scratch.</p>
+      </div>
+      <div class="service-box">
+        <h3>Video Editing</h3>
+        <p>Short-form and cinematic edits with pacing, rhythm, and polished visual storytelling.</p>
+      </div>
+      <div class="service-box">
+        <h3>Technical Guidance</h3>
+        <p>Teaching computer fundamentals, web development, and editing workflows in a simple way.</p>
+      </div>
+    </div>
+  </section>
 
-    <div class="subfooter">
-        <div class="description">
-            <div class="one">
-                <a href="https://www.instagram.com/saroye.yuvraj/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://github.com/yuvrajsaroye162-ai"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.threads.com/@saroye.yuvraj"><i class="fa-brands fa-threads"></i></a>
-            </div>
-            <div class="two">
-                <a href="#Hero">Top</a>
-                <a href="#main">About</a>
-                <a href="#footer">Capabilities</a>
-            </div>
-            <div class="three">
-                <span>M — +91 94652 74735</span>
-                <br>
-                <span>&copy; 2026 Studio Yuvraj. Architecture & Design.</span>
-            </div>
-        </div>
+  <section class="faq" id="faq">
+    <div class="section-head">
+      <div class="about-meta">// FAQ</div>
+      <h2 class="section-title">Common Questions</h2>
     </div>
 
-    <script>
-        const menuToggle = document.getElementById('mobile-menu');
-        const navMenu = document.getElementById('nav-menu');
-        const navLinks = document.querySelectorAll('.nav a');
+    <div class="faq-list">
+      <details>
+        <summary>What kind of projects do you take?</summary>
+        <p>Portfolio websites, business landing pages, UI-focused interfaces, and video editing work.</p>
+      </details>
+      <details>
+        <summary>Do you work with clients remotely?</summary>
+        <p>Yes, projects can be handled remotely with clear communication and regular updates.</p>
+      </details>
+      <details>
+        <summary>How can I contact you?</summary>
+        <p>Use the form below or reach out through social links and phone contact in the footer.</p>
+      </details>
+    </div>
+  </section>
 
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
+  <div class="footer-highlights" id="footer">
+    <div class="grid-content">
+      <h1>Video Articulation</h1>
+      <p>
+        Video editing extends far beyond assembling footage. It is the craft of shaping atmosphere, rhythm, and visual narrative into a cohesive cinematic experience. Every transition, frame, and color grade is executed with deliberate precision to evoke emotion while preserving clarity and sophistication.
+      </p>
+    </div>
+    <div class="grid-content">
+      <h1>Intelligence Systems</h1>
+      <p>
+        Artificial intelligence has become an indispensable extension of my development workflow, enabling me to transform ambitious concepts into refined digital experiences efficiently. I use AI to accelerate research, optimize code architecture, refine user experiences, and enhance creative problem-solving while keeping quality under my own judgment.
+      </p>
+    </div>
+    <div class="grid-content">
+      <h1>Technical Instruction</h1>
+      <p>
+        Knowledge is most valuable when shared with clarity and purpose. I simplify complex concepts across computer fundamentals, web development, and video editing into structured learning experiences that help learners build confidence and practical skills.
+      </p>
+    </div>
+  </div>
 
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menuToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
-    </script>
+  <div class="contact-section" id="contact">
+    <div class="contact-title-box">
+      <p>Let's design something meaningful.</p>
+      <div class="contact-note">
+        Tell me about your project, timeline, and goals. I usually respond quickly, and I keep the form short so it is easy to start a conversation.
+      </div>
+    </div>
+
+    <div class="form-wrapper">
+      <form action="https://formsubmit.co/yuvrajsaroye@gmail.com/" method="post">
+        <div class="form-group">
+          <label for="name">Identification</label>
+          <input type="text" id="name" placeholder="Your name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Digital Address</label>
+          <input type="email" id="email" placeholder="email@domain.com" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Project Parameters</label>
+          <textarea id="message" name="message" rows="4" placeholder="Describe the scope..." required></textarea>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit" id="submit">Initiate Conversation</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="subfooter">
+    <div class="footer-description">
+      <div class="footer-social-links">
+        <a href="https://www.instagram.com/saroye.yuvraj/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://github.com/yuvrajsaroye162-ai" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.threads.com/@saroye.yuvraj" aria-label="Threads"><i class="fa-brands fa-threads"></i></a>
+      </div>
+      <div class="footer-nav-links">
+        <a href="#Hero">Top</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+      </div>
+      <div class="footer-info-text">
+        <span>M — +91 94652 74735</span>
+        <br>
+        <span>&copy; 2026 Studio Yuvraj. Architecture &amp; Design.</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('.nav-menu-list a');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    const updateCursor = (e) => {
+      document.body.style.setProperty('--x', e.clientX + 'px');
+      document.body.style.setProperty('--y', e.clientY + 'px');
+    };
+
+    window.addEventListener('mousemove', updateCursor);
+  </script>
 </body>
 </html>
